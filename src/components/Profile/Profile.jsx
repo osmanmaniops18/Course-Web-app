@@ -7,17 +7,24 @@ import { updateProfilePicture } from '../../redux/actions/profile'
 import { loadUser } from '../../redux/actions/user'
 import { useEffect } from 'react'
 import { toast } from 'react-hot-toast'
+<<<<<<< HEAD
 import { removeFromPlaylist } from '../../redux/actions/course'
+=======
+>>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
 
 
 const Profile = ({user}) => {
  const dispatch=useDispatch()
  const {loading,message,error}=useSelector(state=>state.profile)
+<<<<<<< HEAD
   const removeFromPlaylistHandler= async id=>{
    await dispatch(removeFromPlaylist(id))
    dispatch(loadUser())
   
   }
+=======
+  const removeFromPlaylistHandler=id=>{console.log(id)}
+>>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
   const changeImageSubmitHandler=async (e,img)=>{
     e.preventDefault()
     const myForm=new FormData();
@@ -97,8 +104,13 @@ const Profile = ({user}) => {
       user.playlist.length > 0 && (
         <Stack alignItems="center" direction={["column","row"]} flexWrap="wrap" p={"4"}>
         {
+<<<<<<< HEAD
           user.playlist.map((element,index)=>(
             <VStack key={index} w={"48"} m="2" >
+=======
+          user.playlist.map((element)=>(
+            <VStack w={"48"} m="2" key={element.course}>
+>>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
               <Image boxSize={"full"} objectFit="contain" src={element.poster}/>
               <HStack>
                 <Link to={`/course/${element.course}`}>
@@ -106,7 +118,11 @@ const Profile = ({user}) => {
                     Watch Now
                   </Button>
                 </Link>
+<<<<<<< HEAD
                 <Button isLoading={loading} onClick={()=>removeFromPlaylistHandler(element.courseId)}>
+=======
+                <Button onClick={()=>removeFromPlaylistHandler(element.course)}>
+>>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
                   <RiDeleteBin7Fill/>
                 </Button>
               </HStack>

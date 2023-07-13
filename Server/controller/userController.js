@@ -220,7 +220,11 @@ export const addToPlayList=catchAsyncError( async(req,resp,next)=>{
 
 
     const user=await User.findById(req.user._id);
+<<<<<<< HEAD
     const course=await Course.findById(req.body.id);
+=======
+    const course=await Course.findById(req.body._id);
+>>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
     if(!course) return next(new ErrorHandler("Invalid Course ID",404))
   
 
