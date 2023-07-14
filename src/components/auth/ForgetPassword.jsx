@@ -13,10 +13,7 @@ function ForgetPassword({isAutenticated}) {
     const dispatch=useDispatch()
    
     const submitHandler=(e)=>{
-<<<<<<< HEAD
      
-=======
->>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
       e.preventDefault()
       dispatch(forgetPassword(email))
 
@@ -42,17 +39,11 @@ function ForgetPassword({isAutenticated}) {
 
     },[isAutenticated,navigate])
 
-<<<<<<< HEAD
    
  
   return (
     <Container py={"16"} h="90vh">
      <form onSubmit={submitHandler}>
-=======
- 
-  return (
-    <Container py={"16"} h="90vh">
->>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
       <Heading
         children="Forget Password"
         textTransform={'uppercase'}
@@ -61,11 +52,6 @@ function ForgetPassword({isAutenticated}) {
       
       />
       <VStack spacing={"8"}>
-<<<<<<< HEAD
-
-=======
- <form onSubmit={submitHandler}>
->>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
  <Input
             required
             type={'email'}
@@ -75,16 +61,10 @@ function ForgetPassword({isAutenticated}) {
             onChange={e => setEmail(e.target.value)}
             placeholder="abc@gmail.com"
           />
-<<<<<<< HEAD
           <Button isLoading={loading} width={"full"} type="submit" colorScheme="yellow" my={"8"}>Send Reset Link</Button>
           </VStack>
  </form>
       
-=======
-          <Button isLoading={loading} width={"full"} colorScheme="yellow" my={"8"}>Send Reset Link</Button>
- </form>
-      </VStack>
->>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
     </Container>
   );
 }

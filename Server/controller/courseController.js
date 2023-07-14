@@ -11,10 +11,7 @@ export const getAllCourses= catchAsyncError(async (req,resp,next)=>{
 
     const keyword=req.query.keyword || ""
     const category=req.query.category || "";
-<<<<<<< HEAD
    
-=======
->>>>>>> 30056cbaf66c72095fe31022d0c6598f27b3d52f
     const courses=await Course.find({
         title:{
             $regex:keyword,
